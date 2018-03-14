@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		   <script src="js/jquery.min.js"></script>
+		    <script src="js/angular.min.js"></script>
+			 <script src="js/bootstrap.min.js"></script>
+			<script src="js/lodash.min.js"></script>
+      <script src="js/restangular.min.js"></script>
+       <script src="js/angular-route.js"></script>
+	      <script src="js/angular-ui-router.min.js"></script>
+			 <script src="app/app.js/module.js"></script>
+         <script src="app/app.js/router.js"></script>
+         <script src="js/angular-messages.min.js"></script>
+        <script src="node_modules/angularjs-toaster/toaster.css"></script>
+		<script src="node_modules/angularjs-toaster/toaster.js"></script>
+        <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+		<script src="node_modules/angular-drag-and-drop-lists/angular-drag-and-drop-lists.js"></script>
+		     <script src="node_modules/angular-utils-pagination/dirPagination.js"></script>
+		<script src="node_modules/angular-utils-pagination/dirPagination.tpl.html"></script>
+
+
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+				 <script src="app/controller/postjobctrl.js"></script>
+				 <script src="app/controller/changepswctrl.js"></script>
+				 <script src="app/controller/empprofilectrl.js"></script>
+				 <script src="app/controller/profilectrl.js"></script>
+				 <script src="app/controller/shortlistctrl.js"></script>
+				 <script src="app/controller/notifiedctrl.js"></script>
+				 <script src="app/controller/appliedctrl.js"></script>
+				 <script src="app/controller/inboxctrl.js"></script>
+				 <script src="app/controller/contactctrl.js"></script>
+				 <script src="app/controller/emploginctrl.js"></script>
+                 <script src="app/controller/registrationctrl.js"></script>
+                 <script src="app/controller/closedctrl.js"></script>
+                 <script src="app/controller/dashboardctrl.js"></script>
+<script src="app/controller/editjobctrl.js"></script>
+				 <script src="app\controller\changectrl.js"></script>
+		<script src="app\controller\jobsctrl.js"></script>
+
+		<script src="app\controller\logctrl.js"></script>
+		<script src="app\controller\myctrl.js"></script>
+		<script src="app\controller\regctrl.js"></script>
+
+		<script src="app\controller\seactrl.js"></script>
+		<script src="app\controller\savejob.js"></script>
+		<script src="app\controller\apply.js"></script>
+
+
+
+		<script src="app\directive\myprofile.js"></script>
+
+
+
+
+ 		<title>Employer Dashboard</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+		<!-- Animate CSS -->
+		<link href="css/animate.css" rel="stylesheet" media="screen">
+
+		<!-- Main CSS -->
+		<link href="css/main.css" rel="stylesheet" media="screen">
+
+		<!-- Main CSS -->
+		<link href="css/horizontal-bar/horiz-bar-chart.css" rel="stylesheet" media="screen">
+
+		<!-- Icomoon Icons -->
+		<link href="fonts/icomoon/icomoon.css" rel="stylesheet" />
+		<!-- Flags CSS -->
+		<link rel="stylesheet" href="css/flags/flag-icon-custom.css" />
+
+		<!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+			<script src="js/respond.min.js"></script>
+		<![endif]-->
+		<style>
+		tr
+		{
+			border: 2px solid;
+		   border: 10px solid white;
+		}
+
+		</style>
+        <style>
+            .rag{
+                margin-left: 210px;
+                margin-top: 0px;
+            }
+        </style>
+        <style>
+            .raj{
+                margin-top: 70px;
+                margin-left: 230px;
+            }
+            
+        </style>
+	</head>
+    <body>
+<script type="text/javascript">
+$("#skill").select2();
+$("#skill1").select2();
+
+</script>
+
+<div class="top-bar clearfix">
+	<div class="page-title">
+		<h4>My Profile</h4>
+	</div>
+   <!-- <div class="logo">
+        <img src="images/joblogo.png" alt="jobportal">
+    </div>-->
+	<ul class="sales-stats hidden-xs">
+		<li>
+			<div class="sales-block hidden-sm hidden-xs">
+				<span id="sale_today"></span>
+			</div>
+			<div class="sales-details">
+				<h4><span>80</span> <i class="icon-arrow-up-right2 up"></i></h4>
+				<h5>Related Jobs</h5>
+			</div>
+		</li>
+		<li>
+			<div class="sales-block hidden-sm hidden-xs">
+				<span id="sale_weekly"></span>
+			</div>
+			<div class="sales-details">
+				<h4><span>90</span> <i class="icon-arrow-up-right2 up"></i></h4>
+				<h5>Total Jobs</h5>
+			</div>
+		</li>
+	</ul>
+</div>
+   
+<!-- Top Bar Ends -->
+
+<!-- Main container starts -->
+<div class="main-container">
+
+	<!-- Container fluid Starts -->
+	<div class="container-fluid">
+<div class="vertical-nav">
+
+			<!-- Collapse menu starts -->
+			<button class="collapse-menu">
+				<i class="icon-dehaze"></i>
+			</button>
+			<!-- Collapse menu ends -->
+
+			<!-- Logo starts -->
+			<div class="logo">
+				<a href="">
+					<img src="images/logo.png" alt="Job Portal" />
+				</a>
+			</div>
+			<!-- Logo ends -->
+
+			<!-- Current user starts -->
+			<div class="user-info">
+				<!-- <div class="user-img">
+					<img src="img/user7.png" alt="User Info">
+					<span class="likes-info">26</span>
+				</div> -->
+				<h5 class="user-name-o">Employee</h5>
+				<p class="profile-complete">
+					Profile Complete - 78%
+				</p>
+			</div>
+			<!-- Current user ends -->
+
+			<!-- Sidebar menu start -->
+			 <ul class="menu clearfix">
+   
+    <li>
+      <a href='dashbord.html'>
+        <i class="icon-ac_unit"></i>
+        <span class="menu-item">Dashbord</span>
+      </a>
+                 </li>
+    <li class="active selected">
+      <a href='profile.html'>
+        <i class="icon-ac_unit"></i>
+        <span class="menu-item">Edit Profile</span>
+      </a>
+    </li>
+    <li>
+      <a href='search-jobs.html'>
+        <i class="icon-devices_other"></i>
+        <span class="menu-item">Search Jobs</span>
+        <span class="down-arrow"></span>
+      </a>
+    </li>
+    <li>
+      <a href='latest-jobs.html'>
+        <i class="icon-devices_other"></i>
+        <span class="menu-item">Latest Jobs</span>
+        <span class="down-arrow"></span>
+      </a>
+    </li>
+
+    <li>
+      <a href='savejobs.html'>
+        <i class="icon-av_timer"></i>
+        <span class="menu-item">Saved Jobs</span>
+      </a>
+    </li>
+    <li>
+      <a href='applyjobs.html'>
+        <i class="icon-av_timer"></i>
+        <span class="menu-item">apply Jobs</span>
+      </a>
+    </li>
+
+    <li>
+      <a href='change-password.html'>
+        <i class="icon-timeline"></i>
+        <span class="menu-item">Change Password</span>
+      </a>
+    </li>
+<li>
+				<a href="index1.html">
+					<!--<i class="glyphicon glyphicon-off"></i>-->
+                    <i class="glyphicon glyphicon-off"></i>
+					<span class="menu-item">Logout</span>
+				</a>
+			</li>
+  </ul>
+			<!-- Sidebar menu snd -->
+
+		</div>
+			<!-- Row start -->
+        <div class="raj">
+            <div class="abc">
+			<div class="row gutter">
+				<div class="col-md-12 col-sm-12 col-sx-12">
+					<div class="user-account">
+							<div class="social-list">
+							<div class="row gutter">
+								<div class="col-md-6 col-md-offset-3">
+									<div class="row">
+										<div class="col-md-3 col-sm-3 col-xs-3 center-text">
+											<h3>59</h3>
+											<a ui-sref="dashbord.applydJobs" style="color:white;">Applied Profiles</a>
+										</div>
+										<div class="col-md-3 col-sm-3 col-xs-3 center-text">
+											<h3>18</h3>
+											<a ui-sref="dashbord.SavedJobs" style="color:white;">Saved Jobs</a>
+										</div>
+										<div class="col-md-3 col-sm-3 col-xs-3 center-text">
+											<h3>15</h3>
+											<small>Profiles Viwed</small>
+										</div>
+										<div class="col-md-3 col-sm-3 col-xs-3 center-text">
+											<h3>57</h3>
+											<small>Contacted</small>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div></div></div>
+			<!-- Row end -->
+
+
+		<!-- Row Starts -->
+        <div class="rag">
+		<div class="row gutter job-listings">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+			 <div class="panel panel-blue">
+					<div class="panel-heading">
+						<h4>Edit Profile</h4>
+					</div>
+					<div class="panel-body">
+						<form id="movieForm" method="post">
+							<div class="form-group">
+								<div class="row gutter">
+									<div class="col-md-8">
+										<label class="control-label">Full Name</label>
+										<input type="text" class="form-control" name="title" value="" ng-model="dataa.full_name"/>
+									</div>
+									<div class="col-md-4 selectContainer">
+										<label class="control-label">Experience</label>
+										<input type="text" class="form-control" name="name" value="" ng-model="dataa.experience"/>
+
+									</div>
+									</div>
+								</div>
+
+							<div class="form-group">
+								<div class="row gutter">
+									<div class="col-md-6">
+										<label class="control-label">Email Id</label>
+										<input type="text" class="form-control" name="director" value="" ng-model="dataa.email" />
+									</div>
+									<div class="col-md-6">
+										<label class="control-label">Graduation</label>
+										<input type="text" class="form-control" name="writer" value="" ng-model="dataa. graduation" />
+									</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="row gutter">
+									<div class="col-md-3">
+										<label class="control-label">Contact Number</label>
+										<input type="text" class="form-control" name="writer" value="" ng-model="dataa.number"/>
+									</div>
+									<div class="col-md-3 selectContainer">
+										<label class="control-label">Gender</label>
+										<select class="form-control" name="genre" ng-model="dataa.gender" ng-options="gender.gender as gender.gender for gender in genders">
+											<option value="">select gender</option>
+
+										</select>
+									</div>
+									<div class="col-md-3 selectContainer">
+										<label class="control-label">Current Location</label>
+										<select class="form-control" name="genre" ng-model="dataa.current_location" ng-options="x.city as x.city for x in citys">
+											<option value="">select location</option>
+
+										</select>
+									</div>
+									<div class="col-md-3 selectContainer">
+										<label class="control-label">Prefered Location</label>
+										<select class="form-control" name="genre" ng-model="dataa.prefered_location" ng-options="city.city as city.city for city in citys">
+											<option value="">select location</option>
+
+										</select>
+									</div>
+								</div>
+							</div>
+
+
+
+							<div class="form-group">
+								<div class="row gutter">
+									<div class="col-md-6">
+										<label class="control-label">Primary Skills</label>
+										<select class="form-control" name="skills"  id="skill" multiple="multiple" ng-model="dataa.primary_skills" ng-options="skills.skills as skills.skills for skills in skillss">
+											<option value="">select skills</option>
+
+										</select>
+									</div>
+
+
+									<div class="col-md-6">
+										<label class="control-label">Secondary Skills</label>
+										<select class="form-control" name="skills" id="skill1" multiple="multiple" ng-model="dataa.secondary_skills" ng-options="skills.skills as skills.skills for skills in skillss">
+											<option value="">select skills</option>
+											
+										</select>
+								</div>
+
+							</div>
+						</div>
+
+
+
+							<div class="form-group">
+								<label class="control-label">Status</label>
+								<div class="input-group">
+									<div class="round-radio">
+										<input type="radio" value="Active" id="terrible" name="status" checked="" ng-model="dataa.status">
+										<label for="terrible"></label>
+										<div class="cb-label">Active</div>
+									</div>
+									<div class="round-radio">
+										<input type="radio" value="Deactive" id="watchable" name="status" ng-model="dataa.status">
+										<label for="watchable"></label>
+										<div class="cb-label">Deactive</div>
+									</div>
+
+								</div>
+							</div>
+							<button type="button" class="btn btn-danger" ng-click="update()">Update Profile</button>
+						</form>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	<!-- Container fluid ends -->
+</div>
+<!-- Main container ends -->
+
+<!-- Footer Start -->
+
+<!-- Footer end -->
+</div>
+
+</body>
+</html>
+<!-- Dashboard Wrapper End -->
+
+<!-- jQuery (necessary for Bootstrap's Java
+
+						<div class="user-details">
+							<h4 class="user-name">{{dataa.fullname}}</h4>
+							<h5 class="description">{{}}</h5>
+						</div>
+					

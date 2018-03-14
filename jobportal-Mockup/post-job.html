@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		  
+
+
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+		
+<title>Employer Dashboard</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+		<!-- Animate CSS -->
+		<link href="css/animate.css" rel="stylesheet" media="screen">
+
+		<!-- Main CSS -->
+		<link href="css/main.css" rel="stylesheet" media="screen">
+
+		<!-- Main CSS -->
+		<link href="css/horizontal-bar/horiz-bar-chart.css" rel="stylesheet" media="screen">
+
+		<!-- Icomoon Icons -->
+		<link href="fonts/icomoon/icomoon.css" rel="stylesheet" />
+		<!-- Flags CSS -->
+		<link rel="stylesheet" href="css/flags/flag-icon-custom.css" />
+
+		<!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+			<script src="js/respond.min.js"></script>
+		<![endif]-->
+		<style>
+		tr
+		{
+			border: 2px solid;
+		   border: 10px solid white;
+		}
+
+		</style>
+        <style>
+            .yoga{
+                margin-left: 220px;
+                margin-right: -10px;
+                margin-top: -10px;
+            margin-bottom: 40px;
+            }
+        </style>
+	</head>
+    
+<script type="text/javascript">
+$("#rname").select2();
+$("#skill").select2();
+
+</script>
+    
+    
+    
+	<body class="purple" >
+
+			<!-- Top Bar Starts -->
+			<div class="top-bar clearfix">
+				<div class="page-title">
+					<h3>Post Job</h3>
+				</div>
+				<ul class="sales-stats hidden-xs">
+					<li>
+						<div class="sales-block hidden-sm hidden-xs">
+							<span id="sale_today"></span>
+						</div>
+						<div class="sales-details">
+							<h4><span>80</span> <i class="icon-arrow-up-right2 up"></i></h4>
+							<h5>Related Jobs</h5>
+						</div>
+					</li>
+					<li>
+						<div class="sales-block hidden-sm hidden-xs">
+							<span id="sale_weekly"></span>
+						</div>
+						<div class="sales-details">
+							<h4><span>235</span> <i class="icon-arrow-up-right2 up"></i></h4>
+							<h5>Total Jobs</h5>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- Top Bar Ends -->
+
+			<!-- Main container starts -->
+			<div class="main-container">
+
+				<!-- Container fluid Starts -->
+				<div class="container-fluid">
+   <div class="vertical-nav">
+
+		<!-- Collapse menu starts -->
+		<button class="collapse-menu">
+			<i class="icon-dehaze"></i>
+		</button>
+		<!-- Collapse menu ends -->
+
+		<!-- Logo starts -->
+		<div class="logo">
+			<a href="">
+				<img src="images/logo.png" alt="Job Portal" />
+			</a>
+		</div>
+		<!-- Logo ends -->
+
+		<!-- Current user starts -->
+		<div class="user-info">
+			<h5 class="user-name-o">Employer</h5>
+			<p class="profile-complete">
+				Profile Complete - 78%
+			</p>
+		</div>
+		<!-- Current user ends -->
+
+		<!-- Sidebar menu start -->
+		<ul class="menu clearfix">
+			<li>
+				<a href="dashboard.html">
+					<i class="icon-ac_unit"></i>
+					<span class="menu-item">Dashboards</span>
+					
+				</a>
+			</li>
+			<li  class="active selected">
+				<a href="post-job.html">
+					
+                    <i class="icon-graphic_eq"></i>
+					<span class="menu-item">Post Job</span>
+				</a>
+			</li>
+            
+            <li>
+				<a href="editjob.html">
+					<i class="icon-ac_unit"></i>
+					<span class="menu-item">View Jobs</span>
+				</a>
+			</li>
+
+			<li>
+				<a href='myprofile.html'>
+					<i class="icon-ac_unit"></i>
+					<span class="menu-item">My Profile</span>
+				</a>
+			</li>
+
+			<li>
+				<a href="employeeprofile.html">
+					<i class="icon-devices_other"></i>
+					<span class="menu-item">Employee Profiles</span>
+					
+				</a>
+			</li>
+			<li>
+				<a href="inbox.html">
+					<i class="icon-devices_other"></i>
+					<span class="menu-item">Inbox</span>
+					
+				</a>
+			</li>
+			<li>
+				<a href="shortlisted.html">
+					<i class="icon-devices_other"></i>
+					<span class="menu-item">Shortlisted Profiles</span>
+					
+				</a>
+			</li>
+			<li>
+				<a href="notyfied.html">
+					<i class="icon-devices_other"></i>
+					<span class="menu-item">Notified Profiles</span>
+					
+				</a>
+			</li>
+			<li>
+				<a href="contacted.html">
+					<i class="icon-devices_other"></i>
+					<span class="menu-item">Contacted Profiles</span>
+					
+				</a>
+			</li>
+			<li>
+				<a href="closed.html">
+					<i class="icon-devices_other"></i>
+					<span class="menu-item">Closed profiles</span>
+					
+				</a>
+			</li>
+			<li>
+				<a href="applied.html">
+					<i class="icon-devices_other"></i>
+					<span class="menu-item">Applied Profiles</span>
+					
+				</a>
+			</li>
+
+			<li>
+				<a href="change-password(employeer).html">
+					<i class="icon-timeline"></i>
+					<span class="menu-item">Change Password</span>
+				</a>
+			</li>
+ <li>
+				<a href="index1.html">
+					<!--<i class="glyphicon glyphicon-off"></i>-->
+                    <i class="glyphicon glyphicon-off"></i>
+					<span class="menu-item">Logout</span>
+				</a>
+			</li>
+		</ul>
+		<!-- Sidebar menu snd -->
+
+	</div>
+
+					<!-- Row Starts -->
+                    <div class="yoga">
+					<div class="row gutter job-listings">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+							<div class="panel panel-green">
+								<div class="panel-heading">
+									<strong><h4>Postjob</h4></strong>
+								</div>
+								<div class="panel-body">
+
+									<form name="myForm" class="form-group3" novalidate="">
+                 <div class ="container-fluid">
+
+	<div class="form-inline">
+     <div class= "row">
+	<div class="col-md-2">
+	    <label class="col-md-8" >Domain name:</label>
+	    </div>
+        <div class="col-sm-2">
+	        <select class="form-control" style="width:320px;height:35px" ng-model="data.domain_name"  ng-options="x.domains as x.domains for x in domainss"  name="dname" id="name" >
+			<option>Select domain name</option>
+                <option>Java Developer</option>
+                <option>.Net Developer</option>
+                <option>UI Developer</option>
+                <option>phython Developer</option>
+		    </select>
+	               
+                   <div ng-messages="myForm.dname.$error" ng-if="myForm.dname.$touched && myForm.dname.$error ">
+                   <div ng-messages-include="messages.html"></div>
+                   </div>
+	           </div>
+	           </div>
+	           </div><br/>
+                     <br/>
+
+
+			   <div class="form-inline">
+        <div class= "row">
+	    <div class="col-sm-2">
+            <label class="col-sm-8" id="startDate " >Company Name:</label>
+                 </div>
+                 <div class="col-sm-2">
+					<!-- <select class="form-control" style="width:320px;height:35px" ng-model="data.position" ng-options="data.leavetypeid as data.leavetype for data in data1"  name="pname" id="name">
+					<option selected disabled value="">choose here</option>
+		             </select> -->
+	                   <input type="text" style="width:320px;height:35px;" id="name" name="cname"  ng-model="data.company_name" required/>
+					           
+	                    <div ng-messages="myForm.cname.$error" ng-if="myForm.cname.$touched && myForm.cname.$error ">
+                        <div ng-messages-include="messages.html"></div>
+                      </div>
+	                </div>
+					</div>
+					</div>
+					<br/>
+                     <br/>
+
+
+    <div class="form-inline">
+        <div class= "row">
+	    <div class="col-sm-2">
+            <label class="col-sm-8" id="startDate " >Position:</label>
+                 </div>
+                 <div class="col-sm-2">
+					<!-- <select class="form-control" style="width:320px;height:35px" ng-model="data.position" ng-options="data.leavetypeid as data.leavetype for data in data1"  name="pname" id="name">
+					<option selected disabled value="">choose here</option>
+		             </select> -->
+	                   <input type="text" style="width:320px;height:35px;" id="name" name="pname"  ng-model="data.position" required/>
+					 
+	                    <div ng-messages="myForm.pname.$error" ng-if="myForm.pname.$touched && myForm.pname.$error ">
+                        <div ng-messages-include="messages.html"></div>
+                      </div>
+	                </div>
+					</div>
+					</div>
+					<br/>
+                     <br/>
+
+
+    <div class="form-inline">
+        <div class= "row">
+        <div class="col-md-2">
+            <label class="col-md-8" id="startDate" > Experiance:</label>
+        </div>
+        <div class="col-sm-2">
+		    <!-- <select class="form-control" style="width:320px;height:35px" ng-model="data.experiance" ng-options="data.leavetypeid as data.leavetype for data in data1"  name="name" id="name">
+			<option selected disabled value="">choose here</option>
+		    </select> -->
+			<input type="text" style="width:320px;height:35px;" id="name" name="ename"  ng-model="data.experiance" required/>
+					 		
+			 <div ng-messages="myForm.ename.$error" ng-if="myForm.ename.$touched && myForm.ename.$error ">
+                    <div ng-messages-include="messages.html"></div>
+                </div>
+        </div></div></div><br/>
+                     <br/>
+
+    <div class="form-inline">
+        <div class= "row">
+	    <div class="col-md-2">
+            <label class="col-md-8" id="startDate" >Skills:</label>
+        </div>
+        <div class="col-sm-2">
+			 <!--<input type="text"  id="name" name="sname"  ng-model="data.skills" required/>-->
+            <select class="form-control" name="skills" style="width:320px;height:35px;"  id="skill"  ng-model="dataa.primary_skills" ng-options="skills.skills as skills.skills for skills in skillss">
+           <option>select skills</option>
+                <option>Java</option>
+                <option>Phython</option>
+                <option>.net</option>
+                <option>JavaScript</option>
+
+										</select>
+					
+			        <div ng-messages="myForm.sname.$error" ng-if="myForm.sname.$touched && myForm.sname.$error ">
+                    <div ng-messages-include="messages.html"></div>
+                </div>
+        </div></div></div><br/>
+                     <br/>
+
+    <div class="form-inline">
+        <div class= "row">
+	    <div class="col-md-2">
+            <label class="col-md-8" id="startDate" >Package:</label>
+        </div>
+        <div class="col-sm-2">
+			<!-- <select class="form-control" style="width:320px;height:35px" ng-model="data.pakage" ng-options="data.leavetypeid as data.leavetype for data in data1"  name="name" id="name">
+			<option selected disabled value="">choose here</option>
+		    </select> -->
+			<input type="text" style="width:320px;height:35px;" id="name" name="aname"  ng-model="data.pakage" required/>
+			
+					  <div ng-messages="myForm.aname.$error" ng-if="myForm.aname.$touched && myForm.aname.$error ">
+                    <div ng-messages-include="messages.html"></div>
+                </div>
+    </div></div></div><br/>
+                     <br/>
+
+	 <div class="form-inline">
+        <div class= "row">
+	    <div class="col-md-2">
+            <label class="col-md-8" id="startDate" >Qualification:</label>
+        </div>
+        <div class="col-sm-2">
+
+			<input type="text" style="width:320px;height:35px;" id="name" name="qname"  ng-model="data.qualification" required/>
+			
+			 <div ng-messages="myForm.qname.$error" ng-if="myForm.qname.$touched && myForm.qname.$error ">
+                    <div ng-messages-include="messages.html"></div>
+                </div>
+    </div></div></div><br/>
+                     <br/>
+
+   <div class="form-inline">
+        <div class= "row">
+	    <div class="col-md-2">
+            <label class="col-md-8" id="startDate" >Location:</label>
+        </div>
+        <div class="col-sm-2" >
+		    <select  class="form-control" style="width:320px;height:35px" ng-model="data.location"   name="lname" id="rname" >
+			<option>Select location</option>
+                <option>Banglore</option>
+                <option>Mysore</option>
+                <option>Hyderbad</option>
+                <option>Delhi</option>
+                <option>Pune</option>
+		    </select>
+			
+			 <div ng-messages="myForm.lname.$error" ng-if="myForm.lname.$touched && myForm.lname.$error ">
+                    <div ng-messages-include="messages.html"></div>
+                </div>
+    </div></div></div><br/>
+                     <br/><!--<div class="form-inline">
+        <div class= "row">
+                     <div class="col-md-2">
+            <label class="col-md-8" id="startDate" >Location:</label>
+        </div>
+                     <div class="col-sm-2">
+                     <md-input-container>
+        <label>Location</label>
+        <md-select ng-model="data.location" multiple>
+          
+            <md-option ng-value="data.location" ng-repeat="y in citys">{{y.city}}</md-option>
+          
+          
+        </md-select>
+      </md-input-container>
+                     </div>
+                     </div>
+                     </div>-->
+  
+</div>
+     
+                                        
+
+
+<input type="reset" value="Post" class="btn btn-success" style="margin-left:300px" ng-click="post()">
+                                    <br>
+                                  <div id="snackbar" style="width:300px;margin-left:200px;"></div>
+                                         
+                                    </form>
+                                </div>
+                            </div>
+                </div>
+              </div>
+              
+                            </div>
+                            
+					</div>
+				
+            
+			</div>
+        
+        
+		
+      
+	</body>
+</html>

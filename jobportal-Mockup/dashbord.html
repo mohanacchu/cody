@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		   
+
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css" rel="stylesheet" />
+		
+
+
+
+ 		<title>Employee Dashboard</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+		<!-- Animate CSS -->
+		<link href="css/animate.css" rel="stylesheet" media="screen">
+
+		<!-- Main CSS -->
+		<link href="css/main.css" rel="stylesheet" media="screen">
+
+		<!-- Main CSS -->
+		<link href="css/horizontal-bar/horiz-bar-chart.css" rel="stylesheet" media="screen">
+
+		<!-- Icomoon Icons -->
+		<link href="fonts/icomoon/icomoon.css" rel="stylesheet" />
+		<!-- Flags CSS -->
+		<link rel="stylesheet" href="css/flags/flag-icon-custom.css" />
+
+		<!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+			<script src="js/respond.min.js"></script>
+		<![endif]-->
+		<style>
+		tr
+		{
+			border: 2px solid;
+		   border: 10px solid white;
+		}
+
+		</style>
+        <style>
+            .raj{
+                margin-left: 230px;
+                
+            }
+        </style>
+        <style>
+            .aaa{
+                margin-left: 230px;
+                margin-right: 10px;
+                margin-top: -10px;
+                
+            }
+        </style>
+        <style>
+            .cas{
+                height: 400px;
+            }
+            /*.aaa{
+                background-color: lightskyblue;
+            }*/
+            .abc{
+                background-color:white ;
+            }
+        </style>
+       
+
+	
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen" />
+
+		<!-- Animate CSS -->
+		<link href="css/animate.css" rel="stylesheet" media="screen" />
+
+		<!-- Main CSS -->
+		<link href="css/main.css" rel="stylesheet" media="screen" />
+
+		<!-- Icomoon Icons -->
+		<link href="fonts/icomoon/icomoon.css" rel="stylesheet" />
+
+		<!-- Circliful CSS -->
+		<link rel="stylesheet" href="css/circliful/circliful.css" />
+
+		<!-- Flags CSS -->
+		<link rel="stylesheet" href="css/flags/flag-icon-custom.css" />
+
+		<link rel="stylesheet" href="css/dashboard.css" />
+
+</head>
+<body>
+   
+  
+      <div class="top-bar clearfix">
+				<div class="page-title">
+					<h4>Dashboard</h4>
+				</div>
+				<ul class="sales-stats hidden-xs">
+					<li>
+						<div class="sales-block hidden-sm hidden-xs">
+							<span id="sale_today"></span>
+						</div>
+						<div class="sales-details">
+							<h4><span>80</span> <i class="icon-arrow-up-right2 up"></i></h4>
+							<h5>Related Jobs</h5>
+						</div>
+					</li>
+					<li>
+						<div class="sales-block hidden-sm hidden-xs">
+							<span id="sale_weekly"></span>
+						</div>
+						<div class="sales-details">
+							<h4><span>235</span> <i class="icon-arrow-up-right2 up"></i></h4>
+							<h5>Total Jobs</h5>
+						</div>
+					</li>
+				</ul>
+			</div>
+        
+             <div class="main-container">
+        <div class="container-fluid">
+            <div class="raju">
+    <div class="vertical-nav">
+
+			<!-- Collapse menu starts -->
+			<button class="collapse-menu">
+				<i class="icon-dehaze"></i>
+			</button>
+			<!-- Collapse menu ends -->
+
+			<!-- Logo starts -->
+			<div class="logo">
+				<a href="">
+					<img src="images/logo.png" alt="Job Portal" />
+				</a>
+			</div>
+			<!-- Logo ends -->
+
+			<!-- Current user starts -->
+			<div class="user-info">
+				<!-- <div class="user-img">
+					<img src="img/user7.png" alt="User Info">
+					<span class="likes-info">26</span>
+				</div> -->
+				<h5 class="user-name-o">Employee</h5>
+				<p class="profile-complete">
+					Profile Complete - 78%
+				</p>
+			</div>
+			<!-- Current user ends -->
+
+			<!-- Sidebar menu start -->
+			 <ul class="menu clearfix">
+   
+    <li  class="active selected">
+      <a href='profile.html'>
+        <i class="icon-ac_unit"></i>
+        <span class="menu-item">Dashbord</span>
+      </a>
+    </li>
+    <li>
+      <a href='profile.html'>
+        <i class="icon-ac_unit"></i>
+        <span class="menu-item">Edit Profile</span>
+      </a>
+    </li>
+    <li>
+      <a href='search-jobs.html'>
+        <i class="icon-devices_other"></i>
+        <span class="menu-item">Search Jobs</span>
+        <span class="down-arrow"></span>
+      </a>
+    </li>
+    <li>
+      <a href='latest-jobs.html'>
+        <i class="icon-devices_other"></i>
+        <span class="menu-item">Latest Jobs</span>
+        <span class="down-arrow"></span>
+      </a>
+    </li>
+
+    <li>
+      <a href='savejobs.html'>
+        <i class="icon-av_timer"></i>
+        <span class="menu-item">Saved Jobs</span>
+      </a>
+    </li>
+    <li>
+      <a href='applyjobs.html'>
+        <i class="icon-av_timer"></i>
+        <span class="menu-item">apply Jobs</span>
+      </a>
+    </li>
+
+    <li>
+      <a href='change-password.html'>
+        <i class="icon-timeline"></i>
+        <span class="menu-item">Change Password</span>
+      </a>
+    </li>
+<li>
+				<a href="index1.html">
+					<!--<i class="glyphicon glyphicon-off"></i>-->
+                    <i class="glyphicon glyphicon-off"></i>
+					<span class="menu-item">Logout</span>
+				</a>
+			</li>
+  </ul>
+    </div></div></div>
+			<!-- Top Bar Starts -->
+			
+			<!-- Top Bar Ends -->
+
+			<!-- Main container starts -->
+			
+
+				<!-- Container fluid Starts -->
+				
+						<!-- Row start -->
+<div class="abc">
+                                <div class="aaa">
+							<div class="row gutter">
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+									<div class="panel panel-red">
+										<div class="panel-body no-padding">
+											<aside class="weather-widget">
+												<div class="weather-header white-bg">
+													<div class="weather-icon">
+														<img src="images/sunrise-sessions.png" alt="Sessions">
+													</div>
+                                                    <h1 class="weather-title"><a href="search-jobs.html">Search Jobs</a></h1>
+												</div>
+												<div class="weather-footer">
+													<h4>60</h4>
+												</div>
+											</aside>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+									<div class="panel panel-blue">
+										<div class="panel-body no-padding">
+											<aside class="weather-widget">
+												<div class="weather-header white-bg">
+													<div class="weather-icon">
+														<img src="images/sunrise-visits.png" alt="Users">
+													</div>
+                                                    <h1 class="weather-title"><a href="latest-jobs.html">Latest Jobs</a></h1>
+												</div>
+												<div class="weather-footer">
+													<h4>15</h4>
+												</div>
+											</aside>
+										</div>
+									</div>
+								</div>
+								<!--<div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+									<div class="panel panel-pink">
+										<div class="panel-body no-padding">
+											<aside class="weather-widget">
+												<div class="weather-header white-bg">
+													<div class="weather-icon">
+														<img src="../../../images/sunrise-page-views.png" alt="Page-Views">
+													</div>
+                                                    <h1 class="weather-title"><a ui-sref="session.closed">Closed</a></h1>
+												</div>
+												<div class="weather-footer">
+													<h4>03</h4>
+												</div>
+											</aside>
+										</div>
+									</div>
+								</div>-->
+								<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+									<div class="panel panel-green">
+										<div class="panel-body no-padding">
+											<aside class="weather-widget">
+												<div class="weather-header white-bg">
+													<div class="weather-icon">
+														<img src="images/sunrise-avg-time.png" alt="Avg Time">
+													</div>
+                                                    <h1 class="weather-title"><a href="savejobs.html">Saved Jobs</a></h1>
+												</div>
+												<div class="weather-footer">
+													<h4>7</h4>
+												</div>
+											</aside>
+										</div>
+									</div>
+								</div>
+							<!--	<div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+									<div class="panel panel-brown">
+										<div class="panel-body no-padding">
+											<aside class="weather-widget">
+												<div class="weather-header white-bg">
+													<div class="weather-icon">
+														<img src="../../../images/sunrise-bounce-rate.png" alt="Bounce Rate">
+													</div>
+                                                    <h1 class="weather-title"><a ui-sref="session.shortlisted">Shorlisted</a></h1>
+												</div>
+												<div class="weather-footer">
+													<h4>1</h4>
+												</div>
+											</aside>
+										</div>
+									</div>
+								</div>-->
+								<!--<div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+									<div class="panel panel-yellow">
+										<div class="panel-body no-padding">
+											<aside class="weather-widget">
+												<div class="weather-header white-bg">
+													<div class="weather-icon">
+														<img src="../../../images/sunrise-new-sessions.png" alt="Users">
+													</div>
+													<h1 class="weather-title">Apply Jobs</h1>
+												</div>
+												<div class="weather-footer">
+													<h4>340</h4>
+												</div>
+											</aside>
+										</div>
+									</div>
+								</div>-->
+							</div>
+							<!-- Row ends -->
+                                </div>
+							<!-- Row Starts -->
+                 <div class="raj">
+							<div class="row gutter">
+
+								<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+									<div class="panel panel-green">
+										<div class="panel-heading">
+											<h4>Jobs<span> Based on Domains</span></h4>
+										</div>
+										<div class="panel-body">
+											<!-- Code Start -->
+											<div class="chart-horiz clearfix">
+												<ul class="horz-bar chart">
+
+													<li class="current" title="Web Developer"><span class="bar" data-number="40000"></span><span class="number">100</span></li>
+													<li class="past" title="Android Develper"><span class="bar" data-number="30000"></span><span class="number">83</span></li>
+
+													<li class="current" title="Php developer"><span class="bar" data-number="50000"></span><span class="number">140</span></li>
+													<li class="past" title="Ui Angular Developer"><span class="bar" data-number="53700"></span><span class="number">150</span></li>
+
+													<li class="current" title="Ui Designer"><span class="bar" data-number="26000"></span><span class="number">69</span></li>
+													<li class="past" title="Hybrid App Developer"><span class="bar" data-number="39400"></span><span class="number">90</span></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+									<div class="panel panel-green">
+										<div class="panel-heading">
+											<h4>Jobs<span> Based on Prgraming Languages</span></h4>
+										</div>
+										<div class="panel-body">
+											<!-- Code Start -->
+											<div class="chart-horiz clearfix">
+												<ul class="horz-bar chart">
+
+													<li class="current" title="Java J2ee"><span class="bar" data-number="20000"></span><span class="number">50</span></li>
+													<li class="past" title="Html Css Javascript"><span class="bar" data-number="40000"></span><span class="number">100</span></li>
+
+													<li class="current" title="Php mysql"><span class="bar" data-number="50000"></span><span class="number">140</span></li>
+													<li class="past" title="Angular js "><span class="bar" data-number="53700"></span><span class="number">150</span></li>
+
+													<li class="current" title="Node js"><span class="bar" data-number="39400"></span><span class="number">90</span></li>
+													<li class="past" title=".Net C#"><span class="bar" data-number="26000"></span><span class="number">69</span></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+                 </div>
+							<!-- Row Ends -->
+<div class="raj">
+							<div class="row gutter">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+							<div class="panel panel-pink">
+								<div class="panel-heading">
+									<h4>Related Jobs</h4>
+								</div>
+								<div class="panel-body">
+									<div class="social-widget">
+										<div class="social-body">
+											<h1>16<span>jobs</span></h1>
+										</div>
+										<div class="social-footer clearfix">
+											<div class="growth">
+												<i class="icon-circle-up text-success"></i>
+
+											</div>
+										</div>
+									</div>
+                                    <br/>
+									<div class="scroll-widget">
+										<ul class="list-group no-margin">
+											<li class="list-group-item"><i class="icon-controller-record text-danger dot"></i> First Week <span class="pull-right text-danger">42</span></li>
+											<li class="list-group-item"><i class="icon-controller-record text-info dot"></i> Second Week <span class="pull-right text-info">49</span></li>
+											<li class="list-group-item"><i class="icon-controller-record text-success dot"></i> Third Week <span class="pull-right text-success">81</span></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+                                <div class="end">
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="panel panel-green">
+								<div class="panel-heading">
+									<h4>% of Views</h4>
+								</div>
+								<div class="panel-body">
+									<div class="social-widget">
+										<div class="social-body">
+											<div class="views-chart">
+												<div id="views" class="donut-lg" style="padding: 0px; position: relative;"><canvas class="base" width="90" height="90"></canvas><canvas class="overlay" width="90" height="90" style="position: absolute; left: 0px; top: 0px;"></canvas></div>
+												<span>66%</span>
+											</div>
+										</div>
+										<div class="social-footer clearfix">
+											<div class="growth">
+												<i class="icon-circle-up text-success"></i>
+												<h2>14<sup>%</sup></h2>
+											</div>
+										</div>
+                                        <pre>
+                                        
+                                        
+                                         
+                                         
+</pre>
+										<p class="social-widget-info">
+                                        
+											More Info about this <strong class="text-info">% of Views</strong>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+                                </div>
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+							<div class="panel panel-pink">
+								<div class="panel-heading">
+									<h4>Profile Completed</h4>
+								</div>
+								<div class="panel-body">
+									<div class="social-widget">
+										<div class="social-body">
+											<span class="full-chart inline-sparkline" id="posts"><canvas style="display: inline-block; vertical-align: top; width: 138px; height: 60px;" width="138" height="60"></canvas></span>
+										</div>
+										<div class="social-footer clearfix">
+											<div class="growth">
+												<i class="icon-circle-down text-danger"></i>
+												<h2>74<sup>%</sup></h2>
+											</div>
+										</div>
+									</div>
+									<div class="scroll-widget">
+										<div class="stock-wraper">
+											<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+												<!-- <ol class="carousel-indicators">
+													<li data-target="#carousel" data-slide-to="0" class="active">
+													</li>
+													<li data-target="#carousel" data-slide-to="1"></li>
+													<li data-target="#carousel" data-slide-to="2"></li>
+													<li data-target="#carousel" data-slide-to="3"></li>
+													<li data-target="#carousel" data-slide-to="4"></li>
+												</ol> -->
+												<!-- Carousel items -->
+												<div class="carousel-inner">
+													<div class="item">
+														<div class="stock-data">
+															<div class="stock-graph">
+																<div class="inline-sparkline" id="aapl"><canvas style="display: inline-block; vertical-align: top; width: 300px; height: 90px;" width="300" height="90"></canvas></div>
+															</div>
+															<span class="stock-name">#one</span>
+															<div class="stock-stats">
+																<span><i class="icon-triangle-up"></i> + 1.97 (0.7%)</span>
+															</div>
+														</div>
+													</div>
+													<div class="item">
+														<div class="stock-data">
+															<div class="stock-graph">
+																<div class="inline-sparkline" id="goog"><canvas style="display: inline-block; vertical-align: top; width: 300px; height: 90px;" width="300" height="90"></canvas></div>
+															</div>
+															<span class="stock-name">#two</span>
+															<div class="stock-stats">
+																<span><i class="icon-triangle-down"></i> - 2.32 (1.31%)</span>
+															</div>
+														</div>
+													</div>
+													<div class="item">
+														<div class="stock-data">
+															<div class="stock-graph">
+																<div class="inline-sparkline" id="nasdaq"><canvas style="display: inline-block; vertical-align: top; width: 300px; height: 90px;" width="300" height="90"></canvas></div>
+															</div>
+															<span class="stock-name">#three</span>
+															<div class="stock-stats">
+																<span><i class="icon-triangle-up"></i> + 1.93 (2.08%)</span>
+															</div>
+														</div>
+													</div>
+													<div class="item active">
+														<div class="stock-data">
+															<div class="stock-graph">
+																<div class="inline-sparkline" id="yahw"><canvas style="display: inline-block; vertical-align: top; width: 300px; height: 90px;" width="300" height="90"></canvas></div>
+															</div>
+															<span class="stock-name">#four</span>
+															<div class="stock-stats">
+																<span><i class="icon-triangle-up"></i> - 4.33 (3.67%)</span>
+															</div>
+														</div>
+													</div>
+													<div class="item">
+														<div class="stock-data">
+															<div class="stock-graph">
+																<div class="inline-sparkline" id="sun"><canvas style="display: inline-block; vertical-align: top; width: 300px; height: 90px;" width="300" height="90"></canvas></div>
+															</div>
+															<span class="stock-name">#five</span>
+															<div class="stock-stats">
+																<span><i class="icon-triangle-up"></i> - 0.86 (0.12%)</span>
+															</div>
+														</div>
+													</div>
+												</div>
+												<!-- Carousel nav -->
+												<!-- <a class="carousel-control left" href="#carousel" data-slide="prev">&lsaquo;</a>
+												<a class="carousel-control right" href="#carousel" data-slide="next">&rsaquo;</a> -->
+											</div>
+                                        </div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div></div>
+					</div>
+
+		
+              
+<!--<ul class="menu clearfix">
+				<li>
+					<a href="dashboard.html">
+						<i class="icon-graphic_eq"></i>
+						<span class="menu-item">Dashboards</span>
+						<span class="down-arrow"></span>
+					</a>
+				</li>
+				<li>
+					<a href='post-job.html'>
+						<i class="icon-ac_unit"></i>
+						<span class="menu-item">Post Job</span>
+					</a>
+				</li>
+				<li>
+					<a href='upload-resume.html'>
+						<i class="icon-av_timer"></i>
+						<span class="menu-item">Resume Search</span>
+					</a>
+				</li>
+				<li>
+					<a href=''>
+						<i class="icon-ac_unit"></i>
+						<span class="menu-item">My Profile</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="icon-devices_other"></i>
+						<span class="menu-item">Employee Profiles</span>
+						<span class="down-arrow"></span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="icon-devices_other"></i>
+						<span class="menu-item">Inbox</span>
+						<span class="down-arrow"></span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="icon-devices_other"></i>
+						<span class="menu-item">Shortlisted</span>
+						<span class="down-arrow"></span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="icon-devices_other"></i>
+						<span class="menu-item">Notified Profiles</span>
+						<span class="down-arrow"></span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="icon-devices_other"></i>
+						<span class="menu-item">Contacted Profiles</span>
+						<span class="down-arrow"></span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="icon-devices_other"></i>
+						<span class="menu-item">Closed profiles</span>
+						<span class="down-arrow"></span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="icon-devices_other"></i>
+						<span class="menu-item">Applied Profiles</span>
+						<span class="down-arrow"></span>
+					</a>
+				</li>
+				<li class="active selected">
+					<a href='change-password.html'>
+						<i class="icon-timeline"></i>
+						<span class="menu-item">Change Password</span>
+					</a>
+				</li>
+
+			</ul>-->
+				<!-- Container fluid ends -->
+ 
+			<!-- Main container ends -->
+
+<div></div>
+    </div>
+		<!-- Dashboard Wrapper End -->
+</body>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+</html>

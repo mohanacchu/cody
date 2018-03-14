@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+<link href="css/login.css" rel="stylesheet" media="screen">
+
+		<!-- Animate CSS -->
+		<link href="css/animate.css" rel="stylesheet" media="screen">
+
+		<!-- Icomoon Icons -->
+		<link href="fonts/icomoon/icomoon.css" rel="stylesheet" />
+        <link href="css/custom.css" rel="stylesheet" />
+
+
+				<script type="text/ng-template" id="messages.html">
+ <p ng-message="required" style="color:black">email-id   required</p>
+<p ng-message="minlength" style="color:black">This field is too short</p>
+<p ng-message="maxlength" style="color:black">This field is too long</p>
+<p ng-message="pattern" style="color:black">This needs to be a valid email</p>
+</script>
+
+
+<script type="text/ng-template"id="messages1.html">
+<p ng-message="required" style="color:black">password  required</p>
+<p ng-message="pattern" style="color:black">Not a valid password</p>
+
+</script>
+          <script language="javascript">
+<!--//
+/*This Script allows people to enter by using a form that asks for a
+UserID and Password*/
+function pasuras(form) {
+if (form.id1.value=="employer@gmail.com") { 
+if (form.pwds.value=="employer@123") {              
+location="dashboard.html" 
+    
+} else {
+alert("Invalid Password")
+}
+} else {  alert("Invalid UserID")
+}
+}
+//-->
+</script>
+        <style>
+            .user{
+                color:black;
+            }
+        </style>
+</head>
+<form action="" id="wrapper" name="myForm"  novalidate="">
+			<div id="box" class="animated bounceIn" style="background-color:#E5E7E9">
+				<div id="top_header">
+					<h3><img src="images/logo.png" alt="Sunrise Admin Logo"></h3>
+					<h5>
+						Sign in to continue to your<br />
+						Employer Account.
+					</h5>
+                     <div class="user">
+                            <center>username:&nbsp;employer@gmail.com</center>
+                            
+                        <center> password:&nbsp;employer@123</center>
+                            </div>
+				</div>
+				<div id="inputs">
+					<div class="form-control">
+						<input type="text"  placeholder="Email" ng-model="data.email"  name="id1"  placeholder="Enter email id" required />
+						<i class="icon-email"></i>
+						<div ng-messages="myForm.email1.$error" ng-if="myForm.email1.$touched && form1.email1.$error">
+                <div ng-messages-include="messages.html"></div>
+
+
+			</div>
+					</div>
+					<div class="form-control">
+						<input type="password"  placeholder="Password" ng-model="data.password"  name="pwds"  required/>
+
+
+						<i class="icon-lock2"></i>
+					</div>
+                    <center><button type="button"  class="btn btn-primary" onClick="pasuras(form)">Sign In</button></center>
+                    <center><div id="snack" style="width:300px;margin-left:3px;">Invalid login details..</div></center>
+                    <!--<toaster-container toaster-options="{'time-out': 3000,'position-class': 'toast-top-right'}"></toaster-container>-->
+
+				</div>
+				<div id="bottom">
+					<div class="squared-check">
+						<input type="checkbox" value="None" id="remember" name="check" checked="">
+						<label for="remember"></label>
+						<div class="cb-label">Remember</div>
+					</div>
+					<a class="right_a" href="forgotpassword.html">Forgot password?</a><br>
+					<a class="right_a" href="register.html">Sign Up</a>
+
+				</div>
+			</div>
+		</form>
+</html>

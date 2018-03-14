@@ -1,0 +1,22 @@
+.job-listings .sale-board .img-type{
+	height: auto;
+	width: auto;
+}
+
+.job-listings{
+	font-size: 12px;
+}
+
+.legend {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* height: 30px; */
+	background: #E8EFF7;
+	line-height: 30px;
+}
+
+.login a h1{
+	color: #fff !important;
+	text-transform: uppercase;
+}

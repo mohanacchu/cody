@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="shortcut icon" href="../../images/favicon.ico">
+	<title>Employee Sign Up</title>
+
+	<link href="css/login.css" rel="stylesheet" media="screen">
+
+	<!-- Animate CSS -->
+	<link href="css/animate.css" rel="stylesheet" media="screen">
+
+	<!-- Icomoon Icons -->
+	<link href="fonts/icomoon/icomoon.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body ng-controller="MyController">
+	<form action="" id="wrapper">
+		<div id="box" class="animated bounceIn" style="background-color:#E5E7E9">
+			<div id="top_header">
+				<h3><img src="images/logo.png"></h3>
+				<h5>
+						<strong>Sign up</strong> to continue to your<br />
+						Employee Account.
+					</h5>
+			</div>
+			<h5>Enter your personal details below:</h5>
+			<di id="inputs">
+
+				<div class="form-control">
+					<input type="text" placeholder="Name" ng-model="data.name">
+					<i class="icon-user2"></i>
+				</div>
+				<div class="form-control">
+					<!--<select class="form-control" name="genre" ng-model="dataa.current_location" ng-options="x.city as x.city for x in citys">
+						<option value="">select location</option>
+
+					</select>-->
+					<i class="icon-home2"></i>
+				</div>
+				<div class="form-control">
+					<input type="text" placeholder="Phone" ng-model="data.phone">
+					<i class="icon-phone"></i>
+				</div>
+
+				<div class="form-control">
+					<div class="radio-group clearfix">
+						<div class="round-radio">
+							<input type="radio" value="male" id="radio1" name="gender" checked="" ng-model="data.gender">
+							<label for="radio1"></label>
+							<div class="cb-label">Male</div>
+						</div>
+						<div class="round-radio">
+							<input type="radio" value="female" id="radio2" name="gender" ng-model="data.gender">
+							<label for="radio2"></label>
+							<div class="cb-label">Female</div>
+						</div>
+					</div>
+				</div>
+			</di>
+			<br>
+			<h5>Enter your account details below:</h5>
+			<di id="inputs">
+				<div class="form-control">
+					<input type="text" placeholder="email" ng-model="data.email">
+					<i class="icon-envelope"></i>
+
+				</div>
+				<div class="form-control">
+					<input type="password" placeholder="password" ng-model="data.password">
+					<i class="icon-lock-open"></i>
+
+				</div>
+				<div class="form-control">
+					<input type="password" placeholder="Password Repeat" ng-model="data.password_Repeat">
+					<i class="icon-lock2"></i>
+
+				</div>
+         <center>
+				<button type="submit" value="Sign Up" ng-click="signup()" style="size:100px">sign up</button>
+			</center>
+			</di>
+
+			<div id="bottom">
+				<div class="squared-check">
+					<input type="checkbox" value="None" id="remember" name="check" checked="">
+					<label for="remember"></label>
+					<div class="cb-label">Remember</div>
+				</div>
+				<a class="right_a" href="employee-login.html">SignIn</a>
+			</div>
+		</div>
+	</form>
+</body>
+
+</html>

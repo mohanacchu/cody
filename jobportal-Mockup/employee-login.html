@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Employee Login</title>
+
+		<!-- Error CSS -->
+		<link href="css/login.css" rel="stylesheet" media="screen">
+
+		<!-- Animate CSS -->
+		<link href="css/animate.css" rel="stylesheet" media="screen">
+
+		<!-- Icomoon Icons -->
+		<link href="fonts/icomoon/icomoon.css" rel="stylesheet" />
+        <script language="javascript">
+<!--//
+/*This Script allows people to enter by using a form that asks for a
+UserID and Password*/
+function pasuser(form) {
+if (form.id.value=="employee@gmail.com") { 
+if (form.pass.value=="employee@123") {              
+location="dashbord.html" 
+    
+} else {
+alert("Invalid Password")
+}
+} else {  alert("Invalid UserID")
+}
+}
+//-->
+</script>
+        <style>
+            .user{
+                
+                color:black;
+            }
+        </style>
+	</head>
+<body>
+	<form action="" id="wrapper" name="myForm">
+				<div id="box" class="animated bounceIn" style="background-color:#E5E7E9">
+					<div id="top_header">
+						<h3><img src="images/logo.png" alt="Sunrise Admin Logo"></h3>
+						<h5>
+							Sign in to continue to your<br />
+						Employee Account.
+					</h5>
+                        <div class="user">
+                            <center>username:&nbsp;employee@gmail.com</center>
+                            
+                        <center> password:&nbsp;employee@123</center>
+                            </div>
+				</div>
+
+					<div class="form-control" >
+						<input type="text" placeholder="Email" name="id">
+						<i class="icon-email"></i>
+
+</div>
+
+
+					<div class="form-control" >
+						<input type="password" placeholder="Password" name="pass">
+						<i class="icon-lock2"></i>
+
+					</div>
+					<center>
+					 <button type="button"  onClick="pasuser(form)">Log In</button>
+			</center>
+
+				<div id="bottom">
+					<div class="squared-check">
+						<input type="checkbox" value="None" id="remember" name="check" checked="">
+						<label for="remember"></label>
+						<div class="cb-label">Remember</div>
+					</div>
+					<a class="right_a" href="forgotpassword(employee).html">Forgot password?</a>
+				</div>
+			</div>
+		</form>
+	</body>
+</html>

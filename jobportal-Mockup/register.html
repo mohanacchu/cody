@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+
+		<!-- Main CSS -->
+		<link href="css/signup.css" rel="stylesheet" media="screen">
+
+		<!-- Font Awesome -->
+		<link href="fonts/font-awesome.min.css" rel="stylesheet">
+
+		<!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+			<script src="js/respond.min.js"></script>
+		<![endif]-->
+
+
+
+       <!-- <script type="text/ng-template" id="messages1.html">
+           <p ng-message="required">field required</p>
+		   <p ng-message="pattern">Only characters are allowed</p>
+        </script>
+
+		<script type="text/ng-template" id="messages2.html">
+          <p ng-message="required">contact number required</p>
+        </script>
+
+		<script type="text/ng-template" id="messages3.html">
+          <p ng-message="required">Address required</p>
+        </script>
+
+		<script type="text/ng-template" id="messages4.html">
+          <p ng-message="required">select state</p>
+        </script>
+		<script type="text/ng-template" id="messages5.html">
+          <p ng-message="required">select city</p>
+        </script>
+
+		<script type="text/ng-template" id="messages6.html">
+          <p ng-message="required">Zip required</p>
+        </script>
+
+		<script type="text/ng-template" id="messages7.html">
+           <p ng-message="required">Email-id required</p>
+		   <p ng-message="pattern">please enter a valid email-id</p>
+        </script>
+		<script type="text/ng-template"id="messages8.html">
+           <p ng-message="required">password required</p>
+           <p ng-message="minlength">password strength is weak</p>
+           <p ng-message="maxlength">password strength good</p>
+           <p ng-message="pattern">password should have  atleast one character,one num and one special character </p>
+        </script>
+
+		<script type="text/ng-template"id="messages9.html">
+           <p ng-message="required"> confirm password required</p>
+           <p ng-message="compareTo">password does not match</p>
+        </script>-->
+
+    <link href="css/custom.css" rel="stylesheet" media="screen">
+
+	</head>
+	<body ng-controller="erController">
+		<form action="" id="wrapper" name="myForm" style="background-color:red">
+			<div id="signup-block" style="background-color:#E5E7E9">
+				<div class="top_header">
+					<h3><img src="images/logo.png"></h3>
+					<h5>
+						Sign Up to continue to your<br />
+						Employer Account.
+					</h5>
+				</div>
+
+				<div class="grid-container">
+
+					<div class="grid clearfix">
+						<h5 class="sm-heading">Enter your personal details</h5>
+						<div class="col-xs-12">
+							<div class="inputs">
+								<div class="form-control">
+									<input type="text" placeholder="Name" ng-model="data.name" name="name" minlength="4" maxlength="30" ng-pattern="/^[a-zA-Z]*$/" required/>
+									<i class="fa fa-user"></i>
+									<!--{{data.name}}-->
+
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="inputs">
+								<div class="form-control">
+									<input type="text"  ng-model="data.mobile" name="name" minlength="10" maxlength="15"   placeholder="+91-8147605555" required/>
+									<i class="fa fa-bank"></i>
+								<!--	{{data.mobile}}-->
+
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="inputs">
+								<div class="form-control">
+									<input type="text" placeholder="Address" ng-model="data.address" name="name" minlength="5" maxlength="50">
+									<i class="fa fa-bank"></i>
+								</div>
+								<!--{{data.address}}-->
+
+							</div>
+						</div>
+
+						<div class="col-xs-6">
+							<div class="inputs">
+
+									<!-- <input type="text" placeholder="State"> -->
+									<div class="form-control">
+
+									<select class="form-control" style="height:50px" ng-model="data.state" ng-options="x.state as x.state for x in states"   id="name">
+		                               <option selected disabled value="">Select state</option>
+		                                 </select>
+									<i class="fa fa-bank"></i>
+									</div>
+								<!--	{{data.state}}-->
+
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="inputs">
+								 <div class="form-control">
+
+									<select class="form-control" style="height:50px" ng-model="data.city" ng-options="location.city as location.city for location in citys"   id="name">
+		                               <option selected disabled value="">Select city</option>
+		                                 </select>
+									<i class="fa fa-bank"></i>
+									</div>
+									<!--{{data.city}}-->
+
+							</div>
+						</div>
+
+						<div class="col-xs-6">
+							<div class="inputs">
+								<div class="form-control">
+									<input type="text" placeholder="Zip" ng-model="data.zip" name="name"   placeholder='60625' required/>
+									<i class="fa fa-bank"></i>
+									<!--{{data.zip}}-->
+
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<br>
+
+					<div class="grid clearfix">
+						<h5 class="sm-heading">Enter your account details</h5>
+						<div class="col-xs-12">
+							<div class="inputs">
+								<div class="form-control">
+									<input type="text" placeholder="Email" ng-model="data.email" name="name" ng-pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/" required/>
+									<i class="fa fa-envelope-o"></i>
+									<!--{{data.email}}-->
+
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="inputs">
+								<div class="form-control">
+									<input type="text" placeholder="Password" ng-model="data.password" name="name" minlength="4" maxlength="15"  required/>
+									<i class="fa fa-lock"></i>
+									<!--{{data.password}}-->
+
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-6">
+							<div class="inputs">
+								<div class="form-control">
+									<input type="password" placeholder="Password Repeat" ng-model="data.confirm_password" name="name" required compare-to="data.password" required/>
+									<i class="fa fa-lock"></i>
+									<!--{{data.confirm_password}}-->
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+                   <br>
+
+				<div class="center-text">
+                    <a href=""><input type="button" value="Sign Up" ng-click="submit()"></a>
+                    <center><div id="snack" style="width:300px;margin-left:3px;">Invalid login details..</div></center>
+					
+					<!--<a href="javascript:void(0)">-->
+                        <br/>
+						<img src="images/signup-with-facebook.png" class="fb-btn" alt="Facebook Btn" style="margin-left:0px;"/>
+                    <div class="yoga">
+                        <img src="images/download.png" class="google-btn" alt="gmail Btn" style="height:40px;width:260px;" /></div>
+				<!--	</a>-->
+				</div>
+				<div class="btm-footer"></div>
+			</div>
+		</form>
+	</body>
+</html>
